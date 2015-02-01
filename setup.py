@@ -84,7 +84,7 @@ def main():
 
         if config is not None:
             os.system('mkdir plugins/'+plugin['directory'])
-            os.system('cp -R /mnt/minestack/plugins/'+plugin['directory']+'/configs/'+config['name']+'/* plugins/'+plugin['directory'])
+            os.system('cp -R /mnt/minestack/plugins/'+plugin['directory']+'/configs/'+config['directory']+'/* plugins/'+plugin['directory'])
         os.system('cp -R /mnt/minestack/plugins/'+plugin['directory']+'/versions/'+version['version']+'/* plugins')
     os.system('ls -l plugins')
 
