@@ -12,8 +12,8 @@ def main():
 
     mongoHosts = os.environ['mongo_addresses'].split(',')
     mongoDB = os.environ['mongo_database']
-    mongoUsername = os.environ['mongo_username']
-    mongoPassword = os.environ['mongo_password']
+    mongoUsername = os.getenv('mongo_username', None)
+    mongoPassword = os.getenv('mongo_password', None)
 
     client = MongoClient(mongoHosts)
     db = client[mongoDB]
